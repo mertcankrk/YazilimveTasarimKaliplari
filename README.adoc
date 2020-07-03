@@ -1,0 +1,120 @@
+//Mertcan Tanser Karakuş
+
+//160202038
+
+:imagesdir: ./images
+
+
+= YazilimTasarimKaliplari
+
+== Linux Dağıtımları
+
+* Pardus
+* Slackware
+* Debian
+* Fedora
+
+== En Popüler Linux Dağıtımları
+
+. Linux Mint
+. Ubuntu
+. Fedora
+. OpenSUSE
+
+=== Admonitions
+
+TIP: Linux Dağıtımları Kullanım Alanlarına Göre Popülerlik Sıralamasında farklılık göstermektedir.
+
+IMPORTANT: Dikkat
+
+CAUTION: Yanıcı Madde
+
+=== Links
+
+Github: https://https://github.com/160202038[External Link]
+
+link: https://www.google.com.tr
+
+
+
+=== Grafik
+
+[[sunset_image]]
+.sunset image
+image::sunset.jpg[Sunset]
+
+image::sunset.jpg[] 
+
+image::sunset.jpg[Manzara]
+
+=== Inline
+
+Click image:play.png[Play, title="Play"] to get the party started.
+
+=== Inline with Position
+
+image:sunset.jpg[Sunset,150,150,role="right"]Gün batımı
+
+ 
+  
+   
+=== Video
+
+video::vb7qN1GI9Lw[youtube]
+
+.app.cpp
+[source,c++]
+----
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    cout << "Hello, World!";
+    return 0;
+}
+----
+
+
+.Linux Bash Script Code Örneği (While Döngüsü)
+----
+#!/bin/bash
+isvalid=true
+count=1
+while [ $isvalid ]
+do
+echo $count
+if [ $count -eq 5 ];
+then
+break
+fi
+((count++))
+done
+----
+
+=== Table
+
+Not Tablosu
+|===
+|  |Matematik |Türkçe 
+
+|Mert
+|65
+|50
+|Murat
+|40
+|80
+|===
+
+Günbatımına gitmek için tıklayınız. <<Grafik,Grafik>>.
+
+[graphviz, dot-example, svg]
+----
+digraph g {
+    a -> b
+    b -> c
+    c -> d
+    d -> a
+}
+----
+

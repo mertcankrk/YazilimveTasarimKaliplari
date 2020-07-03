@@ -1,0 +1,46 @@
+.Builder Pattern UML
+
+
+[uml,file="IteratorDemo.png"]
+--
+@startuml
+left to right direction
+
+Interface Iterator{
+
+-boolean hasNext()
+-Object next()
+
+}
+
+
+Interface Container{
+-Iterator getIterator()
+}
+
+class IteratorDemo{
++Repo namesRepository
++IreratorDemo ıt
+-void run()
+}
+
+class Repo{
++int[] numbers
++int tampon
+}
+
+
+IteratorDemo..|>Iterator
+Repo..|>Container
+Repo-->IteratorDemo : <<use>>
+
+
+
+
+
+@enduml
+--  
+
+
+
+

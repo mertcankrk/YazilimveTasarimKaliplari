@@ -1,0 +1,70 @@
+.Builder Pattern UML
+
+
+[uml,file="Observer.png"]
+--
+@startuml
+left to right direction
+
+
+class DolarKurMusteri1{
+
+}
+
+class DolarKurMusteri2{
+
+}
+
+class thread{
+-DolarKur dk;
++void run()
+-priceThread()
+}
+
+
+class ObserverDemo {
+-void main()
+}
+
+class DolarKur{
+-List<Observer> observerList;
+-double price
+-double hold
+
++setPrice()
++DolarKur()
++checkprice()
++checkprice2()
+
+}
+
+Interface Observer{
+-void update
+
+}
+
+Interface Subject{
+-void addObserver()
+-void removeObserver()
+-void doNotify()
+}
+
+
+DolarKurMusteri1 ..|> Observer
+
+DolarKurMusteri2 ..|> Observer
+
+DolarKur --> Observer : <<use>>
+
+DolarKur ..|> Subject
+
+ObserverDemo --> thread : <<use>>
+
+thread --> DolarKur
+
+@enduml
+--  
+
+
+
+

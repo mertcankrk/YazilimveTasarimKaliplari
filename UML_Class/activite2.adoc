@@ -1,0 +1,53 @@
+[uml,file="UML_Class_diagram.png"]
+--
+@startuml
+
+
+Class Baş
+Class Gövde
+
+Class Oduncu{
++DegirmenKullan()
+}
+
+Class Eşya{
+-Fiyat
+}
+Class OdunSiparisi{
+-miktar
++Oduncu oduncu
+}
+Class insan{
+-boy
+-kilo
+-cinsiyet
+}
+Class OduncuPantalonu{
+}
+
+Class OduncuGömlek{
+-Kalınlık
+}
+Class OduncuBaltası{
+-Keskinlik
+}
+interface Kıyafet{
++DesenGöster()
+}
+Class Degirmen
+
+Oduncu --> insan
+OduncuGömlek --o Oduncu 
+OduncuPantalonu--o Oduncu
+OduncuBaltası --o Oduncu 
+OduncuGömlek..|> Kıyafet
+OduncuPantalonu..|> Kıyafet
+OdunSiparisi --> Oduncu
+Gövde --*  insan
+Baş --* insan
+OduncuBaltası --|> Eşya
+OduncuGömlek --|> Eşya
+Oduncu ..> Degirmen : <<use>>
+
+@enduml
+--  

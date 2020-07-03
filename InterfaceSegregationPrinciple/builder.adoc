@@ -1,0 +1,49 @@
+.InterfaceSegregationPrinciple UML
+
+
+[uml,file="InterfaceSegregationPrinciple.png"]
+--
+@startuml
+left to right direction
+
+Interface koşmak{
+
+}
+
+Interface uçmak{
+
+}
+
+Interface havlamak{
+
+}
+
+class köpek implements havlamak{
+
+}
+
+class kuşlar implements uçmak,koşmak{
+
+}
+
+class kaplan implements koşmak{
+
+}
+
+Interface hayvanlar{
++koşmak()
++havlamak()
++uçmak()
+}
+
+hayvanlar--|>koşmak
+hayvanlar--|>uçmak
+hayvanlar--|>havlamak
+
+
+@enduml
+--  
+
+
+
+

@@ -1,0 +1,43 @@
+[uml,file="FactoryPattern.png"]
+----
+
+package Motors{
+
+interface Motor
+{
++Tip()
++Hacim()
++Piston()
+}
+
+class V8{
+
+}
+
+class boxer{
+
+}
+
+}
+
+class FactoryPattern{
+-V8 V8
+-boxer boxer
++void main()
+}
+
+class ArabaFactory{
++createAraba()
+}
+
+boxer .|> Motor
+V8 .|> Motor
+ArabaFactory --> Motor : <<use>>
+FactoryPattern --> ArabaFactory
+----
+----
+  public static class MotorFactory {
+                public static Motor createMotor(Class aClass) throws    IllegalAccessException, InstantiationException { 
+        return (Motor) aClass.newInstance();
+    }
+----

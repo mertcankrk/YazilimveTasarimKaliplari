@@ -1,0 +1,17 @@
+
+
+[uml,file="SingletonPattern.png"]
+--
+Class SingletonClass{
+- SingletonThreadSafe instance
+-int tampon
+}
+
+Class SingletonPattern{
+-SingletonThreadSafe()
++SingletonThreadSafe getınstance()
+}
+
+
+SingletonClass --> SingletonPattern
+--

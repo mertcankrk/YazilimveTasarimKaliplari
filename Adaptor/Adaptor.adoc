@@ -1,0 +1,65 @@
+.Builder Pattern UML
+
+
+[uml,file="Adaptor.png"]
+--
+
+@startuml
+
+
+Class AdaptorP{
+Kanbgo kangoo()
+AdaptorImp AI(kangoo)
+}
+
+
+Class AdaptorImp implements AracAdaptor{
+Arac ticari;
+
+MiliKilometreyeCevir()
+}
+
+
+Interface Arac{
+getSpeed()
+}
+
+Interface AracAdaptor{
+getSpeed()
+}
+
+Class Kango implements Arac{
+
+}
+
+AdaptorP-->AracAdaptor :<<target>>
+AdaptorImp->Kango: <<Adaptee>>
+
+
+
+
+@enduml
+--  
+[source,java]
+----
+public class AdaptorImp implements AracAdaptor{
+    private Arac ticari;
+    
+    AdaptorImp(Arac kango){
+        ticari=kango;
+    }
+    
+    @Override
+    public double getSpeed() {
+          return MiliKilometreyeCevir(ticari.getSpeed());
+    }
+    
+    private double MiliKilometreyeCevir(double mph) {
+        return mph * 1.60934;
+    }
+    
+
+}
+
+----
+image::img\cikti.png[1000,800]

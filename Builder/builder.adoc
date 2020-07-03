@@ -1,0 +1,56 @@
+.Builder Pattern UML
+
+
+[uml,file="Buidler.png"]
+--
+@startuml
+left to right direction
+
+Interface TankBuilder{
+
++Tank getTank()
++void buildPalet()
++void builddEngine()
++void buildCanon()
+
+}
+
+
+class Tank{
+
++String Palet
++String Canon
++String Engine
+
+}
+
+class AlmanTanki{
++Tank AlmanTank
+}
+
+class JaponTanki{
++Tank JaponTank
+}
+
+class Contractor{
++TankBuilder TB
++Contractor()
++getTank()
++buildTank()
+
+
+}
+
+AlmanTanki ..|> TankBuilder
+JaponTanki ..|> TankBuilder
+TankBuilder --> Tank : <<use>>
+Contractor  ..>  TankBuilder : <<use>>
+
+
+
+@enduml
+--  
+
+
+
+

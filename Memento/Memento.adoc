@@ -1,0 +1,53 @@
+Memento pattern
+
+Özetle nesne üzerinde yapılan değişiklikleri geri alınabilir hale 
+getirir.
+    Geri getirme işlemi için nesnenin bütününün ve ya geri getirmek 
+istediğimiz belirli bir bölümünün daha önceden kaydedilmesi gerekir.
+Yapılan değişikliklerin ardından istenildiği takdirde nesneyi kaydını
+aldığımız zamanki haline geri alabilmemizi sağlar.
+
+
+
+
+.Memento Pattern UML
+
+
+[uml,file="Memento.png"]
+--
+@startuml
+left to right direction
+package MementoPaternDemo { 
+Class Caretaker{
++addMemento()
++getMemento()
+}
+
+Class Memento{
++getState()
+}
+
+Class Originator{
++setState()
++save()
++restore()
+}
+
+Originator ..> Memento
+Memento--o Caretaker
+
+}
+
+Class MementoP{
++Caretaker caretaker
++main()
+}
+
+MementoP->MementoPaternDemo
+
+@enduml
+--  
+image::img\cikti.png[1000,800]
+
+
+
